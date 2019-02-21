@@ -8,6 +8,7 @@ import com.misman.didemo.controller.ConstructorInjectedController;
 import com.misman.didemo.controller.GetterInjectedController;
 import com.misman.didemo.controller.MyController;
 import com.misman.didemo.controller.PropertyInjectedController;
+import com.misman.didemo.examplebeans.FakeDataSource;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -15,10 +16,14 @@ public class DiDemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
-		System.out.println(myController.hello());
+		
+		FakeDataSource fds = (FakeDataSource) ctx.getBean("fakeDataSource");
+		System.out.println(fds.getUser()+ ":" + fds.getPassword());
+		System.out.println("url:" + fds.getUrl());
+		/*System.out.println(myController.hello());
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());*/
 	}
 
 }
