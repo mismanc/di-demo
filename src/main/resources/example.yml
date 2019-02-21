@@ -1,0 +1,24 @@
+# this is a comment
+name:Celaleddin
+names: #Comment
+    - Konya
+    - İstanbul
+    - İzmir
+    - Nevşehir
+  
+ pound_sign: "#"
+ book:
+    author: Necip Fazıl Kısakürek
+    publisher: Büyük Doğu Yayınları
+    
+truth: yes
+another_truth: True
+more_true: true
+is_false: no #No, false, FALSE
+string_val: "This is it's quote"
+colon_string: "my courses: one two three"
+include_new_lines: 
+  laskd 
+  sadslad l saowl
+  skejsjs
+  

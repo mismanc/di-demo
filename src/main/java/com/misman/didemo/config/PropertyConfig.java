@@ -12,7 +12,7 @@ import com.misman.didemo.examplebeans.FakeDataSource;
 import com.misman.didemo.examplebeans.FakeJMSBroker;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+@PropertySource({"classpath:datasource.properties","classpath:jms.properties"})
 public class PropertyConfig {
 
 	@Autowired
